@@ -69,9 +69,9 @@ Each complaint follows a simple workflow:
                            ▼
                     Student views
                   status & response
-
+```
 ## ☁️ System Architecture
-
+```text
                          USERS
                            │
               ┌────────────┴────────────┐
@@ -108,14 +108,14 @@ Each complaint follows a simple workflow:
                             │
                             ▼
                          Internet
-
+```
 🧩 Main Modules
 1. Authentication Module
 
 Firebase Authentication is used to provide Google-based login.
 
 After authentication, the application identifies the user's role from Firestore.
-
+```text
 Google Login
      ↓
 Firebase Authentication
@@ -128,6 +128,7 @@ Role
  ┌───┴────┐
  ▼        ▼
 Student  Admin
+```
 2. Student Complaint Module
 
 Students can submit complaints by providing:
@@ -174,7 +175,7 @@ Administrators can open an individual complaint and update its status or add a r
 5. Role-Based Access Control
 
 The application separates student and administrator functionality.
-
+```text
                  Authenticated User
                          │
                          ▼
@@ -186,7 +187,7 @@ The application separates student and administrator functionality.
                 │                │
                 ▼                ▼
        Student Dashboard    Admin Dashboard
-
+```
 Student access is restricted to the student's own complaints, while administrators can manage complaint records.
 
 🔐 Security
@@ -220,7 +221,7 @@ The user's Firebase Authentication UID is used to associate complaints with the 
 🗄️ Database Design
 
 The project uses Cloud Firestore, a NoSQL cloud database.
-
+```text
 Users Collection
 users
  └── {uid}
@@ -243,7 +244,7 @@ complaints
       ├── createdAt
       └── updatedAt
 🏷️ Complaint Categories
-
+```
 The system currently supports:
 
 Infrastructure
@@ -296,6 +297,7 @@ Scalability
 The infrastructure is managed by Firebase, reducing the need to manually configure and maintain servers.
 
 📁 Project Structure
+```text
 CollegeComplaintSystem/
 │
 ├── index.html                  # Login page
@@ -321,6 +323,7 @@ CollegeComplaintSystem/
 ├── .firebaserc                 # Firebase project configuration
 ├── .gitignore                  # Git ignored files
 └── 404.html                    # Firebase Hosting error page
+```
 🚀 Getting Started
 Prerequisites
 
