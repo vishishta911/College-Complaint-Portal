@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | College Complaint Portal</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="brand">
+            <div class="brand-logo">CC</div>
+
+            <div>
+                <h2>College Complaint Portal</h2>
+                <span>Student Portal</span>
+            </div>
+        </div>
+
+
+        <div class="user-section">
+
+            <img
+                id="userPhoto"
+                class="user-photo"
+                src=""
+                alt="Profile">
+
+            <div class="user-info">
+
+                <strong id="userName">
+                    Student
+                </strong>
+
+                <small id="userEmail">
+                    Loading...
+                </small>
+
+            </div>
+
+            <button
+                class="logout-button"
+                onclick="logoutUser()">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard-container">
+
+        <!-- WELCOME -->
+        <section class="welcome-section">
+
+            <div>
+
+                <p class="welcome-label">
+                    STUDENT DASHBOARD
+                </p>
+
+                <h1>
+                    Welcome, <span id="welcomeName">Student</span> 👋
+                </h1>
+
+                <p>
+                    Submit a complaint, track its progress,
+                    and stay updated on responses.
+                </p>
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                onclick="openComplaintForm()">
+
+                + Submit Complaint
+
+            </button>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon total">
+                    📋
+                </div>
+
+                <div>
+                    <span>Total Complaints</span>
+                    <strong id="totalComplaints">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon pending">
+                    ⏳
+                </div>
+
+                <div>
+                    <span>Pending</span>
+                    <strong id="pendingComplaints">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon review">
+                    🔎
+                </div>
+
+                <div>
+                    <span>Under Review</span>
+                    <strong id="reviewComplaints">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon resolved">
+                    ✓
+                </div>
+
+                <div>
+                    <span>Resolved</span>
+                    <strong id="resolvedComplaints">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPLAINTS -->
+        <section class="complaints-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        My Complaints
+                    </h2>
+
+                    <p>
+                        Track the complaints you have submitted.
+                    </p>
+
+                </div>
+
+                <button
+                    class="secondary-button"
+                    onclick="openComplaintForm()">
+
+                    + New Complaint
+
+                </button>
+
+            </div>
+
+
+            <div
+                id="complaintsList"
+                class="complaints-list">
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        No complaints yet
+                    </h3>
+
+                    <p>
+                        You haven't submitted any complaints.
+                        Your submitted complaints will appear here.
+                    </p>
+
+                    <button
+                        class="primary-button"
+                        onclick="openComplaintForm()">
+
+                        Submit Your First Complaint
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script type="module"
+        src="js/auth.js">
+    </script>
+
+    <script type="module"
+            src="js/student.js">
+    </script>
+
+</body>
+
+</html>

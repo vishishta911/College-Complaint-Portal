@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Complaint Details</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+<header class="navbar">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            CC
+        </div>
+
+        <div>
+
+            <h2>
+                College Complaint Portal
+            </h2>
+
+            <span>
+                Student Portal
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="secondary-button"
+        onclick="goBackToDashboard()">
+
+        ← Dashboard
+
+    </button>
+
+</header>
+
+
+
+<main class="detail-container">
+
+
+    <div
+        id="loadingState"
+        class="empty-state">
+
+        <div class="empty-icon">
+            ⏳
+        </div>
+
+        <h3>
+            Loading complaint...
+        </h3>
+
+    </div>
+
+
+
+    <section
+        id="complaintDetails"
+        style="display:none;">
+
+
+        <div class="detail-header">
+
+            <div>
+
+                <p class="welcome-label">
+                    COMPLAINT DETAILS
+                </p>
+
+                <h1 id="complaintTitle">
+                    -
+                </h1>
+
+                <span
+                    id="complaintId"
+                    class="complaint-id">
+                </span>
+
+            </div>
+
+
+            <span
+                id="currentStatus"
+                class="status pending">
+
+                Pending
+
+            </span>
+
+        </div>
+
+
+
+        <!-- COMPLAINT INFORMATION -->
+
+        <div class="detail-card">
+
+            <h2>
+                Complaint Information
+            </h2>
+
+
+            <div class="detail-grid">
+
+                <div>
+
+                    <span>
+                        Category
+                    </span>
+
+                    <strong id="category">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Submitted
+                    </span>
+
+                    <strong id="submittedDate">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Last Updated
+                    </span>
+
+                    <strong id="updatedDate">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="description-box">
+
+                <span>
+                    Description
+                </span>
+
+                <p id="description">
+                    -
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ADMIN RESPONSE -->
+
+        <div class="detail-card">
+
+            <h2>
+                Administration Response
+            </h2>
+
+
+            <div
+                id="responseContent">
+
+                <div class="no-response-box">
+
+                    <div class="empty-icon">
+                        💬
+                    </div>
+
+                    <h3>
+                        No response yet
+                    </h3>
+
+                    <p>
+                        The administration has not
+                        responded to this complaint yet.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+<script
+    type="module"
+    src="js/student-complaint.js">
+</script>
+
+</body>
+
+</html>

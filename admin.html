@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | College Complaint Portal</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                CC
+            </div>
+
+            <div>
+
+                <h2>
+                    College Complaint Portal
+                </h2>
+
+                <span>
+                    Administration
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="user-section">
+
+            <img
+                id="adminPhoto"
+                class="user-photo"
+                src=""
+                alt="Admin">
+
+            <div class="user-info">
+
+                <strong id="adminName">
+                    Admin
+                </strong>
+
+                <small>
+                    Administrator
+                </small>
+
+            </div>
+
+
+            <button
+                class="logout-button"
+                onclick="logoutAdmin()">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="dashboard-container">
+
+
+        <section class="welcome-section">
+
+            <div>
+
+                <p class="welcome-label">
+                    ADMINISTRATION
+                </p>
+
+                <h1>
+                    Complaint Management
+                </h1>
+
+                <p>
+                    Review, manage and respond to student complaints.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon total">
+                    📋
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Complaints
+                    </span>
+
+                    <strong id="adminTotal">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon pending">
+                    ⏳
+                </div>
+
+                <div>
+
+                    <span>
+                        Pending
+                    </span>
+
+                    <strong id="adminPending">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon review">
+                    🔎
+                </div>
+
+                <div>
+
+                    <span>
+                        Under Review
+                    </span>
+
+                    <strong id="adminReview">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon resolved">
+                    ✓
+                </div>
+
+                <div>
+
+                    <span>
+                        Resolved
+                    </span>
+
+                    <strong id="adminResolved">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPLAINT MANAGEMENT -->
+
+        <section class="complaints-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        All Complaints
+                    </h2>
+
+                    <p>
+                        Review complaints submitted by students.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTERS -->
+
+            <div class="filter-row">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search complaints...">
+
+
+                <select id="statusFilter">
+
+                    <option value="All">
+                        All Status
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="Under Review">
+                        Under Review
+                    </option>
+
+                    <option value="Resolved">
+                        Resolved
+                    </option>
+
+                </select>
+
+
+                <select id="categoryFilter">
+
+                    <option value="All">
+                        All Categories
+                    </option>
+
+                    <option value="Infrastructure">
+                        Infrastructure
+                    </option>
+
+                    <option value="Laboratory">
+                        Laboratory
+                    </option>
+
+                    <option value="Academics">
+                        Academics
+                    </option>
+
+                    <option value="Transport">
+                        Transport
+                    </option>
+
+                    <option value="Internet / Wi-Fi">
+                        Internet / Wi-Fi
+                    </option>
+
+                    <option value="Hostel">
+                        Hostel
+                    </option>
+
+                    <option value="Canteen">
+                        Canteen
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                id="adminComplaintsList"
+                class="admin-complaints-list">
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        Loading complaints...
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script type="module"
+        src="js/auth.js">
+    </script>
+
+    <script type="module"
+            src="js/admin.js">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Complaint | College Complaint Portal</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                CC
+            </div>
+
+            <div>
+
+                <h2>
+                    College Complaint Portal
+                </h2>
+
+                <span>
+                    Administration
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="secondary-button"
+            onclick="goBackToAdmin()">
+
+            ← All Complaints
+
+        </button>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="detail-container">
+
+
+        <div
+            id="loadingState"
+            class="empty-state">
+
+            <div class="empty-icon">
+                ⏳
+            </div>
+
+            <h3>
+                Loading complaint...
+            </h3>
+
+        </div>
+
+
+        <!-- COMPLAINT DETAILS -->
+
+        <section
+            id="complaintDetails"
+            style="display:none;">
+
+
+            <div class="detail-header">
+
+                <div>
+
+                    <p class="welcome-label">
+                        COMPLAINT DETAILS
+                    </p>
+
+                    <h1 id="complaintTitle">
+                        Complaint
+                    </h1>
+
+                    <span
+                        id="complaintId"
+                        class="complaint-id">
+                    </span>
+
+                </div>
+
+
+                <span
+                    id="currentStatus"
+                    class="status pending">
+
+                    Pending
+
+                </span>
+
+            </div>
+
+
+            <!-- STUDENT INFORMATION -->
+
+            <div class="detail-card">
+
+                <h2>
+                    Student Information
+                </h2>
+
+
+                <div class="detail-grid">
+
+                    <div>
+
+                        <span>
+                            Name
+                        </span>
+
+                        <strong
+                            id="studentName">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Email
+                        </span>
+
+                        <strong
+                            id="studentEmail">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMPLAINT INFORMATION -->
+
+            <div class="detail-card">
+
+                <h2>
+                    Complaint Information
+                </h2>
+
+
+                <div class="detail-grid">
+
+                    <div>
+
+                        <span>
+                            Category
+                        </span>
+
+                        <strong
+                            id="category">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Submitted
+                        </span>
+
+                        <strong
+                            id="submittedDate">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="description-box">
+
+                    <span>
+                        Description
+                    </span>
+
+                    <p id="description">
+                        -
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADMIN ACTION -->
+
+            <div class="detail-card admin-action-card">
+
+                <h2>
+                    Manage Complaint
+                </h2>
+
+
+                <div class="form-group">
+
+                    <label for="status">
+
+                        Complaint Status
+
+                    </label>
+
+
+                    <select id="status">
+
+                        <option value="Pending">
+                            Pending
+                        </option>
+
+                        <option value="Under Review">
+                            Under Review
+                        </option>
+
+                        <option value="Resolved">
+                            Resolved
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="adminResponse">
+
+                        Response to Student
+
+                    </label>
+
+
+                    <textarea
+                        id="adminResponse"
+                        rows="6"
+                        maxlength="1000"
+                        placeholder="Enter a response or resolution note for the student...">
+                    </textarea>
+
+                </div>
+
+
+                <button
+                    id="updateButton"
+                    class="primary-button">
+
+                    Update Complaint
+
+                </button>
+
+
+                <div
+                    id="updateMessage"
+                    class="update-message"
+                    style="display:none;">
+
+                    ✓ Complaint updated successfully.
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script type="module"
+            src="js/admin-complaint.js">
+    </script>
+
+</body>
+
+</html>

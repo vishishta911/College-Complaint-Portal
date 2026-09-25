@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Submit Complaint | College Complaint Portal</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                CC
+            </div>
+
+            <div>
+
+                <h2>
+                    College Complaint Portal
+                </h2>
+
+                <span>
+                    Student Portal
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="secondary-button"
+            onclick="goToDashboard()">
+
+            ← Dashboard
+
+        </button>
+
+    </header>
+
+
+    <!-- FORM -->
+
+    <main class="form-container">
+
+        <div class="form-header">
+
+            <p class="welcome-label">
+                NEW COMPLAINT
+            </p>
+
+            <h1>
+                Submit a Complaint
+            </h1>
+
+            <p>
+                Provide the details below so the concerned
+                department can review your complaint.
+            </p>
+
+        </div>
+
+
+        <form id="complaintForm">
+
+
+            <!-- CATEGORY -->
+
+            <div class="form-group">
+
+                <label for="category">
+                    Complaint Category
+                </label>
+
+                <select
+                    id="category"
+                    required>
+
+                    <option value="">
+                        Select a category
+                    </option>
+
+                    <option value="Infrastructure">
+                        Infrastructure
+                    </option>
+
+                    <option value="Laboratory">
+                        Laboratory
+                    </option>
+
+                    <option value="Academics">
+                        Academics
+                    </option>
+
+                    <option value="Transport">
+                        Transport
+                    </option>
+
+                    <option value="Cleanliness">
+                        Cleanliness
+                    </option>
+
+                    <option value="Electricity">
+                        Electricity
+                    </option>
+
+                    <option value="Internet / Wi-Fi">
+                        Internet / Wi-Fi
+                    </option>
+
+                    <option value="Hostel">
+                        Hostel
+                    </option>
+
+                    <option value="Canteen">
+                        Canteen
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <div class="form-group">
+
+                <label for="title">
+                    Complaint Title
+                </label>
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Example: Projector not working in CSE-302"
+                    maxlength="100"
+                    required>
+
+                <small>
+                    Keep the title short and specific.
+                </small>
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="form-group">
+
+                <label for="description">
+                    Description
+                </label>
+
+                <textarea
+                    id="description"
+                    rows="7"
+                    maxlength="1000"
+                    placeholder="Describe the issue clearly, including relevant details such as location, date, or affected facilities..."
+                    required></textarea>
+
+                <small>
+                    Maximum 1000 characters.
+                </small>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    onclick="goToDashboard()">
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    id="submitComplaint"
+                    class="primary-button">
+
+                    Submit Complaint
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+        <!-- SUCCESS MESSAGE -->
+
+        <div
+            id="successMessage"
+            class="success-message"
+            style="display:none;">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Complaint Submitted
+            </h2>
+
+            <p>
+                Your complaint has been successfully submitted.
+            </p>
+
+            <div class="complaint-number">
+
+                Complaint ID:
+                <strong id="complaintId">
+                    -
+                </strong>
+
+            </div>
+
+            <button
+                class="primary-button"
+                onclick="goToDashboard()">
+
+                Go to Dashboard
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script type="module"
+            src="js/complaint.js">
+    </script>
+
+</body>
+
+</html>
